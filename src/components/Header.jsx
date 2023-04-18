@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import colors from '../styles/colors'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo_red.png'
 
 import { useLocation } from "react-router-dom";
 // import { useState } from 'react';
