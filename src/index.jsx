@@ -29,7 +29,9 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         text-decoration: none;
         color: #000000;
-        font-family: 'Montserrat'
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 16px;
     }
 `
 
@@ -44,7 +46,7 @@ root.render(
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route path='/Accommodation'>
+                <Route path='/Accommodation/:idAccommodation'>
                     <Accommodation />
                 </Route>
                 <Footer />
