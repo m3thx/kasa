@@ -4,39 +4,40 @@ import { useLocation } from "react-router-dom";
 import colors from '../styles/colors';
 import logementList from '../datas/logements.json'
 import img_home from '../assets/img_home.png'
+import Banner from '../styles/Banner';
 
 const HomeContainer = styled.div`
     margin: 0 7% 0 7%;
 `
 
-const Banner = styled.div`
-    height: 220px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: #000000;
-    border-radius: 25px;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 45px;
+// const Banner = styled.div`
+//     height: 220px;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     background: #000000;
+//     border-radius: 25px;
+//     position: relative;
+//     overflow: hidden;
+//     margin-bottom: 45px;
     
   
-    img {
-      width: 100%;
-      object-fit: fill;
-      mix-blend-mode: exclusion;
-      opacity: 0.6;
+//     img {
+//       width: 100%;
+//       object-fit: fill;
+//       mix-blend-mode: exclusion;
+//       opacity: 0.6;
       
-    }
+//     }
     
-    h1 {
-    color: ${colors.white};
-    position: absolute;
-    font-size: 3rem;
-    }
-`
+//     h1 {
+//     color: ${colors.white};
+//     position: absolute;
+//     font-size: 3rem;
+//     }
+// `
 
 const BoxContainer = styled.div`
     display: flex;
@@ -63,6 +64,7 @@ const StyledBox = styled.div`
     border-radius: 10px;
     margin-bottom: 50px;
     position: relative;
+    overflow-y: hidden;
     
 
     img {
@@ -83,24 +85,30 @@ const StyledBox = styled.div`
       bottom: 5.88%;
       mix-blend-mode: lighten;      
     }
+    
+    a{
+      overflow: hidden;
+    }
 `
 
 function Home() {
   console.log(logementList)
   const location = useLocation().pathname
-  
-  
+  const locationUrl = location + 'Accommodation/'
+
   return (
     <HomeContainer>
+
       <Banner>
         <img src={img_home} alt='bord de mer'></img>
         <h1>Chez vous, partout et ailleurs</h1>
       </Banner>
-      <BoxContainer>
 
+      <BoxContainer>
         {logementList.map((logement, index) =>
+          
           <StyledBox key={`${logement.id}`}>
-            <a href={location+`${logement.id}`} >
+            <a href={locationUrl+`${logement.id}`} >
               <img src={`${logement.cover}`} alt={`${logement.title}`}>
                 </img>
                 </a>
@@ -109,7 +117,9 @@ function Home() {
             </div>
           </StyledBox>
         )}
+
       </BoxContainer>
+      
     </HomeContainer>
   );
 }
