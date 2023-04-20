@@ -1,7 +1,7 @@
 // Import de modules
 import React from 'react';
 import { createRoot } from 'react-dom/client'; // React 18
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 
 // Import de pages
@@ -9,13 +9,15 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import Accommodation from './pages/Accommodation';
 import Footer from './components/Footer'
+import About from './pages/About';
+import Error from './components/Error';
 
 // https://www.delftstack.com/fr/howto/react/react-fonts/
 import WebFont from 'webfontloader';
 
 WebFont.load({
     google: {
-        families : ['Montserrat:400,500', 'sans-serif']
+        families: ['Montserrat:400,500', 'sans-serif']
     }
 })
 
@@ -32,7 +34,9 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Montserrat';
         font-weight: 500;
         font-size: 16px;
+        overflow-x: hidden;
     }
+
 `
 
 // Génération de la page
@@ -40,16 +44,25 @@ const root = createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Router>
-            <GlobalStyle />
-                <Header />
 
+            <GlobalStyle />
+            <Header />
+            <Switch>
                 <Route exact path="/">
                     <Home />
                 </Route>
                 <Route path='/Accommodation/:idAccommodation'>
                     <Accommodation />
                 </Route>
-                <Footer />
+                <Route path="/About/">
+                    <About />
+                </Route>
+                <Route>
+                    <Error />
+                </Route>
+            </Switch>
+            <Footer />
+
         </Router>
     </React.StrictMode>,
 )
