@@ -2,7 +2,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client'; // React 18
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { createGlobalStyle } from 'styled-components'
+import { HelmetProvider } from 'react-helmet-async';
+
+import { GlobalStyle, BodyDiv} from './styles/index'
 
 // Import de pages
 import Home from './pages/Home';
@@ -12,8 +14,10 @@ import Footer from './components/Footer'
 import About from './pages/About';
 import Error from './components/Error';
 
+
 // https://www.delftstack.com/fr/howto/react/react-fonts/
 import WebFont from 'webfontloader';
+import './styles/index.css'
 
 WebFont.load({
     google: {
@@ -21,48 +25,33 @@ WebFont.load({
     }
 })
 
-// Override User agent rules
-const GlobalStyle = createGlobalStyle`
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        color: #000000;
-        font-family: 'Montserrat';
-        font-weight: 500;
-        font-size: 16px;
-        overflow-x: hidden;
-    }
-
-`
-
 // Génération de la page
 const root = createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Router>
-
+        <HelmetProvider>
             <GlobalStyle />
+            <BodyDiv>
             <Header />
             <Switch>
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route path='/Accommodation/:idAccommodation'>
+                <Route path='/Accommodation/:idAccommodation' >
+                {/* <Route exact path='/Accommodation/:idAccommodation' errorElement={<Error />}> */}
                     <Accommodation />
                 </Route>
-                <Route path="/About/">
+                <Route exact path="/About/">
                     <About />
                 </Route>
-                <Route>
+                <Route path="*">
                     <Error />
                 </Route>
             </Switch>
             <Footer />
-
+            </BodyDiv>
+            </HelmetProvider>
         </Router>
     </React.StrictMode>,
 )
