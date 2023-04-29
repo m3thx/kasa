@@ -1,9 +1,4 @@
-function Accommodation() {
-    return (
-        <div>
-            <h1>Logements</h1>
-        </div>
-    )
-}
+import Accommodation from "../components/Accommodation/index";
 
-export default Accommodation
+
+export default Accommodation;
