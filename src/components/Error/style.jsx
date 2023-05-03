@@ -8,44 +8,37 @@ export const StyledError = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: fit-content;
-    left: 0px;
-    top: 0px;
-    border-radius: nullpx;
 
     h1 {
-        font-family: Montserrat;
-        font-size: 288px;
+        font-size: clamp(6rem, 1.7746rem + 18.0282vw, 18rem);
         font-weight: 700;
-        line-height: 411px;
-        letter-spacing: 0em;
         text-align: center;
         color: ${colors.red};
+
+        margin: 66px 0;
     }
 
     p {
-        font-family: Montserrat;
-        font-size: 36px;
-        font-weight: 500;
-        line-height: 51px;
+        font-size: clamp(1.125rem, 0.7289rem + 1.6901vw, 2.25rem);
+        padding: 0 max(10%, 58px);
         letter-spacing: 0em;
-        text-align: left;
+        text-align: center;
         color: ${colors.red};
+        margin-bottom: 182px;
     }
 
     nav{
-        margin-top: 180px;
+        margin-bottom: 143px;
     }
 
     a {
-        font-family: Montserrat;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
         line-height: 26px;
         letter-spacing: 0em;
         text-align: left;
         color: ${colors.red};
         text-decoration: underline;
+        
     }
 
 `

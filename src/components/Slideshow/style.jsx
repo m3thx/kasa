@@ -3,12 +3,14 @@ import styled from "styled-components"
 export const SlideshowStyle = styled.div`
     position: relative;
     height: 415px;
-    max-width: 1240px;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
+
+    @media (max-width: 1024px) {
+        height: 335px;
+    }
 
     .slideshow_image {
         object-fit: cover;

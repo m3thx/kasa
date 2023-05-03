@@ -11,27 +11,25 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Montserrat';
         font-weight: 500;
         font-size: 16px;
+        font-size: 16px;
         margin: 0;
-        
-        @media all and (min-width: 1440px) {
-        font-size: 18px;
-        }
-        @media all and (max-width: 800px) {
-        font-size: 12px;
-        }
     }
 `
 
 export const BodyDiv = styled.div`
     height: 100vh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
+
 `
 export const MainDiv = styled.section`
-    margin: 0 7%;
+    width: 86%;
     max-width: 1240px;
-    @media all and (min-width: 1440px) {
-        width: 1420px;
-        margin: 0 auto;
+    margin: 0 auto;
+    position: relative;
+
+    @media (max-width: 768px) {
+       width: 90%;
     }
 `

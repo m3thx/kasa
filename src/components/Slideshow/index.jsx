@@ -7,7 +7,7 @@ import { SlideshowStyle } from './style'
 
 
 
-export const Slideshow = ({...accommodation}) => {
+export const Slideshow = ({ ...accommodation }) => {
     // const picturesLastIndex = accommodation.pictures.length - 1
     // console.log(picturesLastIndex)
     const [indexPicture, setindexPicture] = useState(0)
@@ -26,15 +26,16 @@ export const Slideshow = ({...accommodation}) => {
         }
     }
     return (
-        <SlideshowStyle>
-            <img className='slideshow_image' src={accommodation.pictures[indexPicture]} alt="" />
-            {/* si une seule image les flèches n'apparaissent pas */}
-            {accommodation.pictures.length - 1 > 1 &&
-                <div className='slideshow_arrowBox'>
-                    <img className='slideshow_arrow' src={arrow_left} alt="Arrow left" onClick={HandleClickLeft} />
-                    <img className='slideshow_arrow' src={arrow_right} alt="Arrow left" onClick={HandleClickRight} />
-                </div>
-            }
-        </SlideshowStyle>
+    
+            <SlideshowStyle>
+                <img className='slideshow_image' src={accommodation.pictures[indexPicture]} alt="Illustration du logement" />
+                {/* si une seule image les flèches n'apparaissent pas */}
+                {accommodation.pictures.length - 1 > 1 &&
+                    <div className='slideshow_arrowBox'>
+                        <img className='slideshow_arrow' src={arrow_left} alt="Arrow left" onClick={HandleClickLeft} />
+                        <img className='slideshow_arrow' src={arrow_right} alt="Arrow left" onClick={HandleClickRight} />
+                    </div>
+                }
+            </SlideshowStyle>
     )
 }

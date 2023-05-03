@@ -15,8 +15,8 @@ export const FooterContainer = styled.footer`
     margin-left: 0;
 
     p {
-        font-size: 1.5rem;
+        font-size: clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem);
         color: ${colors.white};
         padding-top: 30px;
-    }
+}
 `

@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'; // React 18
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async';
 
-import { GlobalStyle, BodyDiv} from './styles/index'
+import { GlobalStyle, BodyDiv } from './styles/index'
 
 // Import de pages
 import Home from './pages/Home';
@@ -30,27 +30,27 @@ const root = createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Router>
-        <HelmetProvider>
-            <GlobalStyle />
-            <BodyDiv>
-            <Header />
-            <Switch>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <Route path='/Accommodation/:idAccommodation' >
-                {/* <Route exact path='/Accommodation/:idAccommodation' errorElement={<Error />}> */}
-                    <Accommodation />
-                </Route>
-                <Route exact path="/About/">
-                    <About />
-                </Route>
-                <Route path="*">
-                    <Error />
-                </Route>
-            </Switch>
-            <Footer />
-            </BodyDiv>
+            <HelmetProvider>
+                <GlobalStyle />
+                <BodyDiv>
+                    <Header />
+                    <Switch>
+                        <Route exact path="/">
+                            <Home />
+                        </Route>
+                        <Route path='/Accommodation/:idAccommodation' >
+                            {/* <Route exact path='/Accommodation/:idAccommodation' errorElement={<Error />}> */}
+                            <Accommodation />
+                        </Route>
+                        <Route exact path="/About/">
+                            <About />
+                        </Route>
+                        <Route path="*">
+                            <Error />
+                        </Route>
+                    </Switch>
+                    <Footer />
+                </BodyDiv>
             </HelmetProvider>
         </Router>
     </React.StrictMode>,

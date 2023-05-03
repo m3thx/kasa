@@ -2,21 +2,19 @@ import styled from "styled-components"
 import colors from "../../styles/colors"
 
 export const AccTitleContainer = styled.div`
-
     display: flex;
     justify-content: space-between;
-    max-width: 1240px;
-    margin: auto;
-    
-    h2, p {
-        font-family: Montserrat;
-        font-size: 36px;
-        font-weight: 500;
+    margin-top: 20px;
+ 
+    h2 {
+        font-size: clamp(1.125rem, 0.7289rem + 1.6901vw, 2.25rem);
         line-height: 51px;
         letter-spacing: 0em;
         text-align: left;
         color: ${colors.red};
-        padding-bottom: -5px;
+    }
+    p {
+        color: ${colors.red};
     }
 
     .AccTitleContainer-title_location {
@@ -35,65 +33,100 @@ export const AccTitleContainer = styled.div`
         flex-direction: column;
     }
 
+    .AccTitleContainer-profileRate {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     .AccTitleContainer-profile {
-        height: fit-content;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .AccTitleContainer-profile_text {
-        font-size: 18px;
+        font-size: clamp(0.75rem, 0.618rem + 0.5634vw, 1.125rem);
         height: 52px;
-        width: 93px;
+        width: 90px;
         line-height: normal;
         text-align: right;
         margin-right: 10px;
         display: flex;
         align-items:center;
     }
+
+    .rateContainer {
+        max-width: 196px;
+        display: flex;
+        gap: 15px;
+        padding-bottom: 40px;
+    }
+
+    .star {
+        height: 24px;
+
+    }
+
+    @media (max-width: 768px) {
+        img {
+        height: 32px;
+        width: 32px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    
+        .AccTitleContainer-profile_text {
+            height: 33px;
+        }
+        .AccTitleContainer-profileRate {
+            flex-direction: row-reverse;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .rateContainer {
+            padding-bottom: 0px;
+            gap: 6px;
+        }
+        .star {
+            width: 13px;
+            height: 13px;
+        }
+    }
 `
 
 export const TagRateContainer = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 10px;
     max-width: 1240px;
-    margin: auto;
+    margin: 20px 0;
 
-    .tagContainer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        height: 25px;
-        gap: 20px;
-        margin: 25px 0 25px 0;
-    }
     .tag {
-        min-width: 115px;
+        display: flex;
+        align-items: center;
         padding: 5px 30px ;
         background: ${colors.red};
         border-radius: 10px;
 
         list-style: none;
         font-family: Montserrat;
-        font-size: 14px;
+        font-size: clamp(0.625rem, 0.537rem + 0.3756vw, 0.875rem);
+
         font-weight: 500;
         line-height: 20px;
         text-align: center;
         color: ${colors.white};
         
+        @media (max-width: 768px) {
+        height: 18px;
+        padding-left: max(3%, 5px);
+        padding-right: max(3%, 5px);
         }
-
-    .rateContainer {
-        display: flex;
-        gap: 15px;
     }
 
-    .star {
-        height: 24px;
-    }
+   
 `
 
 export const AccAccordion = styled.div`
@@ -101,6 +134,7 @@ export const AccAccordion = styled.div`
     gap: 80px;
     max-width: 1240px;
     margin: auto;
+    padding-bottom: 30px;
 
     .fix_height {
         height: 250px;
@@ -111,4 +145,9 @@ export const AccAccordion = styled.div`
         color: ${colors.red};
         font-weight: 400;
     }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 20px;
+        }
 `

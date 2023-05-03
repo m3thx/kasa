@@ -26,27 +26,26 @@ function Accommodation() {
     // gestion des erreurs try / catch et renvoi de page 404
     try {
         return (
-            
+
             <MainDiv>
                 <Head title={`Offre d'hébergement`} description={`Page détaillant les caractériques d'une offre d'hébergement`} />
                 <Slideshow {...accommodation} />
-                <div>
-                    <img src='' alt=''></img>
-                    <AccTitleContainer>
+                <AccTitleContainer>
+                    <div className='AccContainer' >
                         <div className='AccTitleContainer-title'>
                             <h2 className='AccTitleContainer-title_title'>{`${accommodation.title}`}</h2>
                             <p className='AccTitleContainer-title_location'>{`${accommodation.location}`}</p>
                         </div>
-                        <div className='AccTitleContainer-profile'>
-                            <p className='AccTitleContainer-profile_text'>{`${accommodation.host.name}`}</p>
-                            <img src={`${accommodation.host.picture}`} alt="Profil" />
-                        </div>
-                    </AccTitleContainer>
-                    <TagRateContainer>
-                        <div className='tagContainer' >
+                        <TagRateContainer>
                             {accommodation.tags.map((content, index) =>
                                 <li key={accommodation + index} className='tag'> {content}</li>
                             )}
+                        </TagRateContainer>
+                    </div>
+                    <div className='AccTitleContainer-profileRate'>
+                        <div className='AccTitleContainer-profile'>
+                            <p className='AccTitleContainer-profile_text'>{`${accommodation.host.name}`}</p>
+                            <img src={`${accommodation.host.picture}`} alt="Profil" />
                         </div>
                         <div className='rateContainer' >
                             <img src={accommodation.rating > 0 ? starRed : starWhite} alt="star" className='star' />
@@ -55,12 +54,13 @@ function Accommodation() {
                             <img src={accommodation.rating > 3 ? starRed : starWhite} alt="star" className='star' />
                             <img src={accommodation.rating > 4 ? starRed : starWhite} alt="star" className='star' />
                         </div>
-                    </TagRateContainer>
-                    <AccAccordion >
-                        <Accordion key={accommodation.id + Math.random() * 100} title='Description' content={accommodation.description} className='variant' />
-                        <Accordion key={accommodation.id + Math.random() * 100} title='Équipements' content={accommodation.equipments} className='variant'/>
-                    </AccAccordion>
-                </div>
+                    </div>
+                </AccTitleContainer>
+                <AccAccordion >
+                    <Accordion key={accommodation.id + Math.random() * 100} title='Description' content={accommodation.description} className='variant' />
+                    <Accordion key={accommodation.id + Math.random() * 100} title='Équipements' content={accommodation.equipments} className='variant' />
+                </AccAccordion>
+
             </MainDiv>
         )
     } catch (error) {

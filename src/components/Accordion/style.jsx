@@ -17,20 +17,23 @@ const StyledMenu = styled.div`
         align-items: center;
         padding: 0 3.23% 0 1.77%;
         cursor: pointer;
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
     }
 
     h2 {
         color: ${colors.white};
-        font-size: 1.5rem;
+        font-size: clamp(0.8125rem, 0.5704rem + 1.0329vw, 1.5rem);
         &.variant{
-            font-size: 1.125rem;
+            font-size: clamp(0.8125rem, 0.7025rem + 0.4695vw, 1.125rem);
             font-weight: 400;
         }
     }
 
     .menuContent {
         padding: 1.76%;
-        max-height: 249px;
+        /* max-height: 249px; */
         background-color: ${colors.backgroundGrey};
         font-weight: 400;
         line-height: 34px;
@@ -41,9 +44,10 @@ const StyledMenu = styled.div`
         flex-direction: column;
         justify-content: center;
         padding-inline: 20px;
+        
         &.variant {
-            height: 250px;
-            overflow: scroll;
+            height: 260px;
+            overflow-y: scroll;
             margin-bottom: 30px;
         }
 
