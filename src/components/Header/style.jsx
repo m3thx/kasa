@@ -18,6 +18,7 @@ export const HeaderContainer = styled.header`
     @media all and (max-width: 768px) {
         height: 47px;
         width: 90%;
+        margin: 20px auto 27px;
     }
 
     img {

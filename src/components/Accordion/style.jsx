@@ -47,8 +47,6 @@ const StyledMenu = styled.div`
         
         &.variant {
             height: 260px;
-            overflow-y: scroll;
-            margin-bottom: 30px;
         }
 
     }
@@ -65,7 +63,6 @@ const StyledMenu = styled.div`
 
     .arrow_up {
         transform: rotate(180deg);
-       
     }
 
 `

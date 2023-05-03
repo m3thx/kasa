@@ -1,3 +1,5 @@
+// Couleurs du site
+
 const colors = {
     red: '#FF6060',
     grey: '#666666',

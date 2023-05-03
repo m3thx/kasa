@@ -8,29 +8,24 @@ export const AccTitleContainer = styled.div`
  
     h2 {
         font-size: clamp(1.125rem, 0.7289rem + 1.6901vw, 2.25rem);
-        line-height: 51px;
-        letter-spacing: 0em;
         text-align: left;
         color: ${colors.red};
     }
+    
     p {
         color: ${colors.red};
-    }
-
-    .AccTitleContainer-title_location {
-        font-size: 18px;
-        line-height: normal;
-    }
-
-    img {
-        height: 64px;
-        width: 64px;
-        border-radius: 100%;
     }
 
     .AccTitleContainer-title {
         display: flex;
         flex-direction: column;
+        line-height: 51px;
+    }
+
+    .AccTitleContainer-title_location {
+        font-size: 18px;
+        line-height: normal;
+        margin-top: 5px;
     }
 
     .AccTitleContainer-profileRate {
@@ -43,6 +38,7 @@ export const AccTitleContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        word-spacing: 100px;
     }
 
     .AccTitleContainer-profile_text {
@@ -56,6 +52,12 @@ export const AccTitleContainer = styled.div`
         align-items:center;
     }
 
+    img {
+        height: 64px;
+        width: 64px;
+        border-radius: 100%;
+    }
+
     .rateContainer {
         max-width: 196px;
         display: flex;
@@ -65,10 +67,17 @@ export const AccTitleContainer = styled.div`
 
     .star {
         height: 24px;
+        /* margin-top: 16px; */
 
     }
 
     @media (max-width: 768px) {
+        margin-top: 15px;
+
+        .AccTitleContainer-title {
+        line-height: 26px;
+        }
+
         img {
         height: 32px;
         width: 32px;
@@ -93,6 +102,7 @@ export const AccTitleContainer = styled.div`
         .star {
             width: 13px;
             height: 13px;
+
         }
     }
 `
@@ -101,7 +111,7 @@ export const TagRateContainer = styled.div`
     display: flex;
     gap: 10px;
     max-width: 1240px;
-    margin: 20px 0;
+    margin: 20px 0 24px;
 
     .tag {
         display: flex;
@@ -109,13 +119,9 @@ export const TagRateContainer = styled.div`
         padding: 5px 30px ;
         background: ${colors.red};
         border-radius: 10px;
-
         list-style: none;
         font-family: Montserrat;
         font-size: clamp(0.625rem, 0.537rem + 0.3756vw, 0.875rem);
-
-        font-weight: 500;
-        line-height: 20px;
         text-align: center;
         color: ${colors.white};
         
@@ -131,7 +137,7 @@ export const TagRateContainer = styled.div`
 
 export const AccAccordion = styled.div`
     display: flex;
-    gap: 80px;
+    gap: 75px;
     max-width: 1240px;
     margin: auto;
     padding-bottom: 30px;

@@ -8,7 +8,6 @@ function Footer() {
             <img src={logo} alt="Kasa logo" />
             <p>© 2020 Kasa. All rights reserved</p>
         </FooterContainer>
-
     )
 }
 

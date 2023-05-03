@@ -18,11 +18,13 @@ function Home() {
   return (
 
     <MainDiv>
-
+      {/* Utilisation d'Helmet pour passer des meta tags */}
       <Head title='Accueil' description={`Page d'accueil`} />
 
-      <Banner src={img_home} alt={'bord de mer'} h1={'Chez vous, partout et ailleurs'}/>
+      {/* Bannière */}
+      <Banner src={img_home} alt={'bord de mer'} h1={'Chez vous, partout et ailleurs'} />
 
+      {/* Itération de chaque élément contenu dans logements.json */}
       <BoxContainer className="boxContainer">
         {logementList.map((logement, index) =>
 

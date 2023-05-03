@@ -14,7 +14,6 @@ export const StyledError = styled.div`
         font-weight: 700;
         text-align: center;
         color: ${colors.red};
-
         margin: 66px 0;
     }
 
@@ -27,9 +26,11 @@ export const StyledError = styled.div`
         margin-bottom: 182px;
     }
 
+
     nav{
-        margin-bottom: 143px;
+        margin-bottom: 30px;
     }
+    
 
     a {
         font-size: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
@@ -38,7 +39,18 @@ export const StyledError = styled.div`
         text-align: left;
         color: ${colors.red};
         text-decoration: underline;
-        
+    }
+
+    @media (max-width: 768px) {
+        h1{
+            margin-bottom: 10px;
+        }
+        p{
+            margin-bottom: 130px;
+        }
+        nav{
+            margin-bottom: 30px;
+        }
     }
 
 `
