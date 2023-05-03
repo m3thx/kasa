@@ -1,4 +1,4 @@
-import Banner from '../../styles/Banner';
+import { BannerVariant } from '../Banner'
 
 import img_about from '../../assets/img_about.png'
 
@@ -14,9 +14,7 @@ function About() {
     return (
         <MainDiv>
             <Head title='À propos' description='Informations complémentaires sur Kasa et ses services' />
-            <Banner>
-                <img src={img_about} alt='test'></img>
-            </Banner>
+            <BannerVariant src={[img_about]} alt={'Panorama de montagne'} />
             <AboutContainer>
                 {aboutDatas.map((content, index) =>
                     <Accordion key={index} {...content} />
