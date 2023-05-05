@@ -3,11 +3,12 @@ import colors from "../../styles/colors"
 
 export const SlideshowStyle = styled.div`
     position: relative;
-    max-height: 415px;
+    height: 415px;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 
     @media (max-width: 1024px) {
         height: 255px;
@@ -17,6 +18,8 @@ export const SlideshowStyle = styled.div`
         object-fit: cover;
         border-radius: 25px;
         overflow: hidden;
+        object-position: center;
+        height: 100%;
     }
 
     .slideshow_arrowBox {
