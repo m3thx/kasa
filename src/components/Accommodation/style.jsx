@@ -142,16 +142,6 @@ export const AccAccordion = styled.div`
     margin: auto;
     padding-bottom: 30px;
 
-    .fix_height {
-        height: 250px;
-    }
-
-    p{
-        font-size: 1.125rem;
-        color: ${colors.red};
-        font-weight: 400;
-    }
-
     @media (max-width: 1024px) {
         flex-direction: column;
         gap: 20px;
