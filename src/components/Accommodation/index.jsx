@@ -22,7 +22,6 @@ function Accommodation() {
     // recherche du logement à afficher en fonction de son id
     const accommodation = logementList.find(logement => idAccommodation === logement.id)
 
-
     // gestion des erreurs try / catch et renvoi de page 404
     try {
         return (

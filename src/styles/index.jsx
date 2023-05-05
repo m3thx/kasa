@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 500;
         font-size: 16px;
         margin: 0;
+        
     }
 `
 
@@ -22,7 +23,7 @@ export const BodyDiv = styled.div`
     height: 100svh; // Mobile
     display: flex;
     flex-direction: column;
-
+    overflow-x: hidden;
 `
 // Div permettant de gérer les marges
 export const MainDiv = styled.section`
