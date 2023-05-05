@@ -39,7 +39,6 @@ root.render(
                             <Home />
                         </Route>
                         <Route path='/Accommodation/:idAccommodation' >
-                            {/* <Route exact path='/Accommodation/:idAccommodation' errorElement={<Error />}> */}
                             <Accommodation />
                         </Route>
                         <Route exact path="/About/">

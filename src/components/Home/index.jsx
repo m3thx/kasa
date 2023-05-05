@@ -16,7 +16,6 @@ function Home() {
   const locationUrl = location + 'Accommodation/'
 
   return (
-
     <MainDiv>
       {/* Utilisation d'Helmet pour passer des meta tags */}
       <Head title='Accueil' description={`Page d'accueil`} />
