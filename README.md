@@ -42,9 +42,9 @@ Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
  
  
 
- #### Guide d'étape
+ #### Guide d'étapez
 
-afin de vous aider à réaliser ce projet, vous pouvez consulter ce [guide](https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P8+React+Kasa/Guide+d%27etapes+cles+-+Creez+une+application+web+de+location+immobiliere+avec+React.pdf) d’étapes à suivre, qui contient des recommandations et des ressources pour organiser votre travail.
+Afin de vous aider à réaliser ce projet, vous pouvez consulter ce [guide](https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P8+React+Kasa/Guide+d%27etapes+cles+-+Creez+une+application+web+de+location+immobiliere+avec+React.pdf) d’étapes à suivre, qui contient des recommandations et des ressources pour organiser votre travail.
 
 
 ### Pour lancer le serveur utilisez la commande `npm start` et ouvrez l'adresse [http://localhost:3000/](http://localhost:3000/) dans votre navigateur
