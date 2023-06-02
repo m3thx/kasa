@@ -1,7 +1,6 @@
 # Openclassrooms Formation Développeur web
-## Projet 7 - Kasa
-
-![kasa](../Kasa.png)
+## Projet 7 - Kasa 
+![kasa](/src/assets/logo_red.png)
 
 #### Compétences acquises
 
