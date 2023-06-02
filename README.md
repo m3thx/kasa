@@ -11,23 +11,23 @@
 
 Le site de Kasa a été codé il y a maintenant plus de 10 ans en ASP.NET avec un code legacy important. Laura, la CTO, a donc lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté back-end, et React côté front-end. Kasa en a également profité pour commander de nouvelles maquettes auprès de son designer habituel, qui est en freelance. Un gros chantier pour cette année ! 
 
-#
+
 #### Objectif : 
 Démarrer le projet React et développer l’ensemble de l’application, les composants React, les routes React Router, en suivant les maquettes Figma (responsives !) et toutes les infos que je te donne ci-dessous. Et ce avec un code de qualité ! 
 
-#
+
  #### Back-end / data : 
  Le recrutement de la personne en charge du back-end n'est pas terminé et va prendre plus de temps que prévu. Du coup, il va falloir que tu fasses sans pour le moment. Je t'ai extrait les 20 dernières annonces de logements dans ce fichier JSON pour que tu puisses construire le Front qui correspond.
 
-#
+
  #### Contraintes techniques : 
  Tu trouveras les coding guidelines de Kasa  [ici](https://course.oc-static.com/projects/Front-End+V2/P9+React+1/Coding+guidelines+Kasa+FR.pdf).
- #
+ 
  #### Design
 
 Voici les maquettes sur [Figma](https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR?node-id=3%3A0) pour le design d’interface. J’ai l’habitude de travailler avec la logique de composants sur Figma ; Sandra m’a dit que ça te faciliterait le travail sur React. Tu trouveras toutes les ressources dont tu as besoin directement dans la maquette (logo, icônes pour les composants, etc.). Pour cela, il suffit de cliquer sur la ressource souhaitée et de faire "Exporter" au format voulu.
 
-#
+
 #### Contraintes fonctionnelles
 
 
@@ -40,7 +40,7 @@ Collapse : Par défaut, les Collapses sont fermés à l'initialisation de la pag
 Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer.
 Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
  
- #
+ 
 
  #### Guide d'étape
 
